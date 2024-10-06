@@ -1,4 +1,4 @@
-import { useQuery } from "convex/react";
+import {  useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
 import { useState } from "react";
 
@@ -7,6 +7,7 @@ function TableData() {
   const [showModal, setShowModal] = useState(false);
   const [product, setProduct] = useState([]);
 
+  // const oneProduct= useQuery(api.products.getProduct);
   function getProduct(productId) {
     const p = products.filter((e) => e._id === productId);
     setProduct(p);

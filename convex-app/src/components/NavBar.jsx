@@ -10,11 +10,18 @@ function NavBar() {
         Convex App
       </a>
       <a
-        className=" tracking-tight no-underline hover:no-underline focus-visible:ring-2 focus:outline-none focus:ring-black font-bold  text-orange-500 text-xl"
-        href="/"
+        className=" mx-10 tracking-tight no-underline hover:no-underline focus-visible:ring-2 focus:outline-none focus:ring-black font-bold  text-orange-500 text-xl"
+        href="/about"
       >
         {" "}
         About
+      </a>
+      <a
+        className=" mx-10 tracking-tight no-underline hover:no-underline focus-visible:ring-2 focus:outline-none focus:ring-black font-bold  text-orange-500 text-xl"
+        href="/add"
+      >
+        {" "}
+        Add
       </a>
     </div>
     {/* <TableData/> */}
