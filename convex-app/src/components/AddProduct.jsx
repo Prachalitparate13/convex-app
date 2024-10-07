@@ -8,17 +8,14 @@ function AddProduct() {
   const [colour, setColour] = useState("");
   const [price, setPrice] = useState("");
 
-  
-    const addvalue = useMutation(api.products.addProduct)
-      
-   
+  const addvalue = useMutation(api.products.addProduct);
+
   function handleCancel() {
     setCategory("");
     setColour("");
     setPrice("");
     setProductName("");
     // console.log(category,colour,productName,price);
-    
   }
   return (
     <div className=" flex flex-col items-center">
@@ -127,11 +124,15 @@ function AddProduct() {
               <button
                 className=" mx-4 shadow bg-orange-500 hover:bg-orange-300 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
                 type="button"
-                onClick={()=>{addvalue({productname: productName,
-                  category: category,
-                  colour: colour,
-                  price: price});
-                handleCancel()}}
+                onClick={() => {
+                  addvalue({
+                    productname: productName,
+                    category: category,
+                    colour: colour,
+                    price: price,
+                  });
+                  handleCancel();
+                }}
               >
                 Add
               </button>

@@ -11,9 +11,9 @@ export const get = query({
 });
 
 export const getProduct = query({
-  args: { productId: v.id("Products") },
+  args: { id: v.id("Products") },
   handler: async (ctx, args) => {
-    const product = await ctx.db.get(args.productId);
+    const product = await ctx.db.get(args.id);
     // console.log(product)
     return product;
   },
